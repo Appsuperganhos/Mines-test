@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR" style="background: #100f14">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="max-image-preview:large" />
+  <title>jhonxl</title>
+  <link rel="shortcut icon" href="./assets/favicon.png" />
+  <link rel="stylesheet" id="elementor-post-790-css" href="./assets/post-790.css" media="all" />
+  <meta name="generator" content="WordPress 6.2" />
+  <meta name="generator" content="Elementor 3.12.2; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, a11y_improvements, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <style type="text/css" id="operaUserStyle"></style>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+    /* Estilo para o vídeo de fundo */
+    #background-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+    }
+
+    /* Adiciona a imagem de fundo ao body */
+    body {
+      margin: 0;
+      padding: 0;
+      background: #100f14;
+    }
+
+    .elementor {
+      background: rgba(255, 255, 255, 0.8); /* Cor de fundo semi-transparente para a área do site */
+      padding: 20px;
+      border-radius: 10px; /* Bordas arredondadas */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra ao redor do conteúdo */
+      position: relative;
+      z-index: 1;
+    }
+
+    /* CSS para o board */
+    .board {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 5px;
+      margin-bottom: 0;
+      padding: 20px; /* Ajuste o padding conforme necessário */
+      border-radius: 10px; /* Bordas arredondadas */
+      background-color: #000; /* Fundo preto para a área do tabuleiro */
+    }
+
+    .board div {
+      width: 53px;
+      height: 53px;
+      position: relative;
+    }
+
+    .board img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 5px; /* Bordas arredondadas para as imagens */
+      transition: transform 0.3s; /* Transição suave para efeitos de hover */
+    }
+
+    .board img:hover {
+      transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+    }
+  </style>
+
+  <script defer data-domain="apphack.vercel.app" src="https://analytics.vercel.com/script.js"></script>
+</head>
+<body class="home page-template page-template-elementor_canvas page page-id-790 wp-embed-responsive elementor-default elementor-template-canvas elementor-kit-9 elementor-page elementor-page-790 e--ua-blink e--ua-opera e--ua-webkit" data-elementor-device-mode="desktop" style="margin: 0 !important">
+  <!-- Vídeo de fundo -->
+  <video autoplay muted loop id="background-video">
+    <source src="./assets/background-video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div data-elementor-type="wp-page" data-elementor-id="790" class="elementor elementor-790">
+    <section class="elementor-section elementor-top-section elementor-element elementor-element-e2c79f1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e2c79f1" data-element_type="section">
+      <div class="elementor-container elementor-column-gap-default">
+        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-39c3969" data-id="39c3969" data-element_type="column">
+          <div class="elementor-widget-wrap elementor-element-populated">
+            <div class="elementor-element elementor-element-cbfb990 elementor-widget elementor-widget-html" data-id="cbfb990" data-element_type="widget" data-widget_type="html.default">
+              <div class="elementor-widget-container">
+                <style>
+                  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+                  .myIframe {
+                    position: relative;
+                    padding-bottom: 1500px;
+                    padding-top: 30px;
+                    height: 0;
+                    overflow: auto;
+                    -webkit-overflow-scrolling: touch; /*<<--- THIS IS THE KEY*/
+                    border: solid black 1px;
+                  }
+
+                  .myIframe iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                  }
+                  .container {
+                    display: flex;
+                    margin-top: 20px;
+                    flex-direction: column;
+                    align-items: center;
+                    height: fit-content;
+                    padding: 2rem;
+                  }
+
+                  .game-wrapper {
+                    position: relative;
+                  }
+
+                  .banner {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: fit-content;
+                    max-width: 400px; /* Define a largura máxima do banner */
+                    margin-bottom: 20px;
+                  }
+
+                  .banner img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                  }
+
+                  .board {
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-gap: 5px;
+                    margin-bottom: 0;
+                  }
+
+                  .board div {
+                    width: 53px;
+                    height: 53px;
+                  }
+
+                  .board img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                  }
+
+                  .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    display: none;
+                  }
+
+                  .status-container {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                    opacity: 5;
+                    transition: opacity 0.3s ease-in-out;
+                  }
+
+                  .status {
+                    font-size: 24px;
+                    font-weight: bold;
+                    text-align: center;
+                    color: #ffffff;
+                    animation: fadeInOut 15s ease-in-out;
+                  }
+
+                  @keyframes fadeInOut {
+                    0%,
+                    100% {
+                      opacity: 0;
+                    }
+                    15%,
+                    20% {
+                      opacity: 1;
+                    }
+                  }
+
+                  .loader {
+                    border: 6px solid #f3f3f3; /* Light grey */
+                    border-top: 6px solid #5f5f5f; /* Blue */
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    animation: spin 1s linear infinite;
+                  }
+
+                  @keyframes spin {
+                    0% {
+                      transform: rotate(0deg);
+                    }
+                    100% {
+                      transform: rotate(360deg);
+                    }
+                  }
+
+                  .generate-opportunity {
+                    background-image: linear-gradient(#27ea89, #0c7750);
+                    font-family: "Poppins", sans-serif;
+                    height: 45px;
+                    width: 300px;
+                    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+                    color: rgb(255, 255, 255);
+                    padding: 0.5rem 1rem;
+                    font-size: 16px;
+                    font-weight: bold;
+                    border-radius: 12px;
+                    border: none;
+                    cursor: pointer;
+                  }
+
+                  #texto {
+                    color: white;
+                    font-family: "Poppins", sans-serif;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 0.5rem;
+                  }
+
+                  #texto-total {
+                    color: #ffffff;
+                    font-family: "Poppins", sans-serif;
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 0.5rem;
+                  }
+
+                  #result {
+                    margin-top: 2rem;
+                    color: white;
+                    font-family: "Poppins", sans-serif;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-align: center;
+                  }
+
+                  #gerar-plano-button {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                  }
+
+                  .btn {
+                    background-image: linear-gradient(#27ea89, #0c7750);
+                    font-family: "Poppins", sans-serif;
+                    height: 45px;
+                    width: 150px;
+                    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+                    color: rgb(255, 255, 255);
+                    padding: 0.5rem 1rem;
+                    font-size: 16px;
+                    font-weight: bold;
+                    border-radius: 12px;
+                    border: none;
+                    cursor: pointer;
+                  }
+
+                  .btn-primary {
+                    margin-right: 20px;
+                  }
+
+                  .container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: fit-content;
+                    width: 100%;
+                    margin: 0 auto;
+                    margin-top: 3rem;
+                    margin-bottom: 3rem;
+                  }
+
+                  .oportunidades-list {
+                    list-style-type: none;
+                    padding: 0;
+                  }
+
+                  .opportunity {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                    background-color: #e0e0e0;
+                  }
+
+                  .opportunity p {
+                    margin: 0;
+                  }
+
+                  .opportunity span {
+                    margin-left: 5px;
+                  }
+
+                  #progress-text {
+                    color: #ffffff;
+                    font-family: "Poppins", sans-serif;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 0.5rem;
+                  }
+
+                  .progress-bar {
+                    width: 100%;
+                    background-color: #ddd;
+                    border-radius: 10px;
+                  }
+
+                  .progress-bar-inner {
+                    width: 0%;
+                    height: 30px;
+                    background-color: #4caf50;
+                    border-radius: 10px;
+                    transition: width 0.5s;
+                  }
+
+                  #status {
+                    color: white;
+                    font-family: "Poppins", sans-serif;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-top: 0.5rem;
+                  }
+
+                  #custom-input {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                  }
+
+                  #custom-input input {
+                    font-size: 16px;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    margin-bottom: 10px;
+                    width: 200px;
+                  }
+
+                  #custom-input button {
+                    background-image: linear-gradient(#27ea89, #0c7750);
+                    font-family: "Poppins", sans-serif;
+                    height: 45px;
+                    width: 100px;
+                    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+                    color: rgb(255, 255, 255);
+                    padding: 0.5rem 1rem;
+                    font-size: 16px;
+                    font-weight: bold;
+                    border-radius: 12px;
+                    border: none;
+                    cursor: pointer;
+                  }
+
+                  #custom-input span {
+                    font-size: 14px;
+                    color: red;
+                  }
+                </style>
+                <section id="gerar-plano">
+                  <div class="container">
+                    <div class="game-wrapper">
+                      <div class="board"></div>
+                    </div>
+                    <div class="status-container">
+                      <div class="status"></div>
+                    </div>
+                    <div class="banner">
+                      <img src="./assets/logo.png" alt="Logo" />
+                    </div>
+                    <button class="generate-opportunity">Gerar Oportunidade</button>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="text/javascript" src="./assets/jquery.min.js" id="jquery-core-js"></script>
+  <script type="text/javascript" src="./assets/elementor.min.js" id="elementor-frontend-js"></script>
+  <script>
+    // Seu código JavaScript aqui
+  </script>
+</body>
+</html>
