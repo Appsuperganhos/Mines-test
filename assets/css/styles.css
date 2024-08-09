@@ -1,0 +1,15 @@
+.generate-opportunity {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.generate-opportunity:hover {
+    background: #00cc00; /* verde mais claro */
+}
